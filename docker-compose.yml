@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  clases-juan:
+    build: .
+    container_name: clases-juan
+    restart: always
+    expose:
+      - "80"
+    networks:
+      - proxy_network
+
+networks:
+  proxy_network:
+    external: true
