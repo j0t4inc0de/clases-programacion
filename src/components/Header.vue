@@ -32,7 +32,6 @@ const closeMobileMenu = () => {
       <!-- Desktop Nav -->
       <nav class="desktop-nav">
         <a href="#aprender">¿Qué aprenderás?</a>
-        <a href="#metodo">Metodología</a>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#planes">Planes</a>
         <a :href="whatsappLink" target="_blank" rel="noopener noreferrer" class="btn-accent-anim nav-agendar-btn">
@@ -67,7 +66,6 @@ const closeMobileMenu = () => {
     <div class="mobile-nav" :class="{ 'is-open': isMobileMenuOpen }">
       <nav class="mobile-nav-links">
         <a href="#aprender" @click="closeMobileMenu">¿Qué aprenderás?</a>
-        <a href="#metodo" @click="closeMobileMenu">Metodología</a>
         <a href="#sobre-mi" @click="closeMobileMenu">Sobre mí</a>
         <a href="#planes" @click="closeMobileMenu">Planes</a>
         <a 
