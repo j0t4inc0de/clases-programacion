@@ -75,7 +75,7 @@ const plans = ref([
         <span class="section-tag">Valor de Clases & Ritmo</span>
         <h2 class="section-title">Tarifas transparentes y avance a tu propio ritmo</h2>
         <p class="section-subtitle">
-          Sin planes rígidos ni contratos mensuales. Cada clase continúa exactamente donde quedó la anterior, adaptándome al ritmo de aprendizaje del estudiante.
+          Sin contratos ni amarras. Pagas por clase (individual o bloque de 2 horas). Cada clase continúa exactamente donde quedó la anterior, adaptándome al ritmo de aprendizaje del estudiante.
         </p>
       </div>
 

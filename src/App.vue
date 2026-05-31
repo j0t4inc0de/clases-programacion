@@ -3,7 +3,6 @@ import { ref, computed } from 'vue'
 import Header from './components/Header.vue'
 import HeroSection from './components/HeroSection.vue'
 import WhatYouLearn from './components/WhatYouLearn.vue'
-import HowAreClasses from './components/HowAreClasses.vue'
 import ForWhoSection from './components/ForWhoSection.vue'
 import Methodology from './components/Methodology.vue'
 import PlansSection from './components/PlansSection.vue'
@@ -42,8 +41,6 @@ const whatsappLink = computed(() => {
     <HeroSection :whatsapp-link="whatsappLink" />
     
     <WhatYouLearn />
-    
-    <HowAreClasses />
     
     <ForWhoSection />
     
