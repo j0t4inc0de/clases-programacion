@@ -28,7 +28,7 @@ const plans = ref([
     ],
     popular: false,
     cta: 'Agendar Clase',
-    message: '¡Hola Juan! Me gustaría agendar una Clase Individual de 1 hora ($16.000 CLP) para resolver dudas de programación.'
+    message: '¡Hola Juan! Me gustaría agendar una Clase Individual de 1 hora para resolver dudas de programación.'
   },
   {
     name: 'Bloque de 2 Horas',
@@ -46,7 +46,7 @@ const plans = ref([
     popular: true,
     cta: 'Agendar Bloque',
     isTwoHours: true,
-    message: '¡Hola Juan! Me gustaría agendar un Bloque de 2 Horas ($25.000 CLP) para repasar materia o preparar evaluaciones.'
+    message: '¡Hola Juan! Me gustaría agendar un Bloque de 2 Horas para repasar materia o preparar evaluaciones.'
   },
   {
     name: 'Clase Diagnóstica',
