@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Default: Dark Theme (Tech/Professional) */
+  --bg-primary: #0a0f1d;
+  --bg-secondary: #111827;
+  --bg-tertiary: #1f2937;
+  --accent: #0ea5e9; /* Celeste */
+  --accent-rgb: 14, 165, 233;
+  --accent-green: #10b981; /* Verde */
+  --accent-green-rgb: 16, 185, 129;
+  --accent-glow: rgba(14, 165, 233, 0.15);
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(17, 24, 39, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+  
+  --btn-whatsapp: #25d366;
+  --btn-whatsapp-hover: #20ba5a;
+  
+  /* Animated Button Theme Variables (Dark Mode: Celeste/Sky Accent) */
+  --btn-anim-bg: #0369a1; /* sky-700 */
+  --btn-anim-hover-bg: #0c4a6e; /* sky-900 */
+  --btn-anim-shadow: rgba(3, 105, 161, 0.25);
+  --btn-anim-c1: #0c4a6e;
+  --btn-anim-c2: #075985;
+  --btn-anim-c3: #0369a1;
+  --btn-anim-c4: #0284c7;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
+  
+  --transition-theme: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                       color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                       border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                       box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.light-theme {
+  /* Light Theme */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e2e8f0;
+  --accent: #0284c7; /* Darker Celeste for contrast */
+  --accent-rgb: 2, 132, 199;
+  --accent-green: #059669; /* Darker green */
+  --accent-green-rgb: 5, 150, 105;
+  --accent-glow: rgba(2, 132, 199, 0.1);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: rgba(15, 23, 42, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(15, 23, 42, 0.05);
+  --shadow: 0 20px 40px -10px rgba(148, 163, 184, 0.15);
+  
+  /* Animated Button Theme Variables (Light Mode: Celeste/Sky Accent Contrast) */
+  --btn-anim-bg: #0284c7; /* sky-700 in light mode */
+  --btn-anim-hover-bg: #0369a1; /* sky-800 */
+  --btn-anim-shadow: rgba(2, 132, 199, 0.25);
+  --btn-anim-c1: #075985;
+  --btn-anim-c2: #0369a1;
+  --btn-anim-c3: #0284c7;
+  --btn-anim-c4: #0ea5e9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: var(--transition-theme);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base Typography */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Glassmorphism class helper */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow);
+  border-radius: 16px;
+  transition: var(--transition-theme), transform 0.3s ease;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Global Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px; /* modern rounded-md instead of pill for clean look */
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(var(--accent-rgb), 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(var(--accent-rgb), 0.5);
+  filter: brightness(1.1);
+}
+
+.btn-secondary {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--border-color);
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background-color: var(--btn-whatsapp);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  font-weight: 700;
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--btn-whatsapp-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+/* Pulse animation for CTA button */
+.pulse-btn {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Section base styling */
+section {
+  padding: 90px 0;
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+}
+
+/* Section Titles */
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+  background-color: var(--accent-glow);
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Animated Button: Accent Color Theme */
+.btn-accent-anim,
+.btn-purple-anim,
+.btn-sky-anim {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--btn-anim-bg);
+  color: #ffffff !important;
+  padding: 14px 32px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 12px; /* rounded-xl */
+  overflow: hidden;
+  box-shadow: 0 4px 14px var(--btn-anim-shadow);
+  transition: all 0.3s ease;
+  z-index: 10;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-accent-anim:hover,
+.btn-purple-anim:hover,
+.btn-sky-anim:hover {
+  background-color: var(--btn-anim-hover-bg);
+  box-shadow: 0 6px 20px var(--btn-anim-shadow);
+  transform: translateY(-1px);
+}
+
+.btn-accent-anim .circle,
+.btn-purple-anim .circle,
+.btn-sky-anim .circle {
+  position: absolute;
+  border-radius: 50%;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.btn-accent-anim .c-1,
+.btn-purple-anim .c-1,
+.btn-sky-anim .c-1 {
+  top: 3px;
+  right: 80%;
+  width: 160px;
+  height: 160px;
+  background-color: var(--btn-anim-c1);
+  transform: translate(50%, -30%);
+}
+.btn-accent-anim .c-2,
+.btn-purple-anim .c-2,
+.btn-sky-anim .c-2 {
+  top: 3px;
+  right: 80%;
+  width: 128px;
+  height: 128px;
+  background-color: var(--btn-anim-c2);
+  transform: translate(50%, -30%);
+}
+.btn-accent-anim .c-3,
+.btn-purple-anim .c-3,
+.btn-sky-anim .c-3 {
+  top: 3px;
+  right: 80%;
+  width: 96px;
+  height: 96px;
+  background-color: var(--btn-anim-c3);
+  transform: translate(50%, -30%);
+}
+.btn-accent-anim .c-4,
+.btn-purple-anim .c-4,
+.btn-sky-anim .c-4 {
+  top: 3px;
+  right: 80%;
+  width: 56px;
+  height: 56px;
+  background-color: var(--btn-anim-c4);
+  transform: translate(50%, -30%);
+}
+
+.btn-accent-anim:hover .circle,
+.btn-purple-anim:hover .circle,
+.btn-sky-anim:hover .circle {
+  top: 12px;
+  right: -16px;
+  transform: translate(0, 0) scale(1.5);
+  opacity: 0.5;
+}
+
+.btn-accent-anim .btn-text,
+.btn-purple-anim .btn-text,
+.btn-sky-anim .btn-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+}
