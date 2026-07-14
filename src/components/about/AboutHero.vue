@@ -32,10 +32,6 @@ const recruiterWhatsappLink = computed(() => {
 
     <div class="hero-content">
       <div class="status-row">
-        <div class="status-indicator">
-          <span class="status-dot"></span>
-          <span class="status-text">DISPONIBLE PARA CONTRATACIÓN INMEDIATA</span>
-        </div>
         <div class="location-tag">
           <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
