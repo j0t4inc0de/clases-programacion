@@ -23,8 +23,9 @@ const projects = [
     description: 'Plataforma web (Dashboard) orientada a la visualización ininterrumpida de datos críticos provenientes de sensores y dispositivos IoT en terreno. Estandariza múltiples fuentes y protocolos en una interfaz única, rápida y personalizable.',
     impact: 'Resolución de la privacidad y compartimentación de datos industriales mediante una arquitectura granular de control de acceso jerárquico basada en roles (Técnico, Administrador y Trabajador).',
     tags: ['Vue.js 3', 'IoT Architecture', 'Real-Time Data', 'REST APIs', 'RBAC Security', 'Tailwind CSS'],
-    liveUrl: null,
+    liveUrl: 'https://telemetrics.netzona.cl/login',
     githubUrl: null,
+    privateNote: null,
     status: 'EN PRODUCCIÓN / INTERNO'
   },
   {
@@ -41,6 +42,7 @@ const projects = [
     tags: ['Vue.js 3', 'Composition API', 'JavaScript ES6+', 'APIs REST', 'Data Visualization', 'Export PDF/Excel'],
     liveUrl: null,
     githubUrl: null,
+    privateNote: 'Información empresarial privada',
     status: 'PLATAFORMA INDUSTRIAL'
   },
   {
@@ -57,6 +59,7 @@ const projects = [
     tags: ['DevOps', 'Ubuntu 24.04 LTS', 'Docker Compose', 'Cloudflare Tunnels', 'Tailscale VPN', 'PostgreSQL', 'Redis'],
     liveUrl: null,
     githubUrl: null,
+    privateNote: 'Informacion privada',
     status: 'INFRAESTRUCTURA ACTIVA'
   },
   {
@@ -72,7 +75,8 @@ const projects = [
     impact: 'Backend asíncrono de alto rendimiento con Django 5 REST Framework, PostgreSQL y Redis + Gunicorn + Workers, capaz de procesar en paralelo miles de registros sin bloquear la API. Pipeline en 3 capas: Sintaxis RFC 5322, filtrado de +200 dominios desechables y resolución DNS de registros MX. Frontend en Vue.js 3 y Vite con autenticación Passwordless mediante Magic Links.',
     tags: ['Vue.js 3', 'Pinia', 'Django 5 REST', 'Redis Workers', 'PostgreSQL', 'Magic Links JWT', 'n8n Webhooks'],
     liveUrl: null,
-    githubUrl: 'https://github.com/j0t4inc0de/j0tainc0de',
+    githubUrl: 'https://github.com/j0t4inc0de/mailsanitizer',
+    privateNote: null,
     status: 'MICRO-SAAS'
   },
   {
@@ -88,7 +92,8 @@ const projects = [
     impact: 'Motor de reconocimiento facial biométrico en Python que identifica personas en milisegundos utilizando embeddings vectoriales (sin almacenar imágenes sensibles para garantizar la privacidad). API con Django REST Framework y frontend reactivo con Vue.js 3 y Pinia mostrando feed de verificación en vivo e inventario de laboratorio.',
     tags: ['Python IA / Biometría', 'Vue.js 3', 'Pinia', 'Django REST Framework', 'Embeddings', 'Tótem Táctil'],
     liveUrl: null,
-    githubUrl: 'https://github.com/j0t4inc0de/j0tainc0de',
+    githubUrl: 'https://github.com/j0t4inc0de/smartlend',
+    privateNote: null,
     status: 'PROYECTO ACADÉMICO'
   },
   {
@@ -105,6 +110,7 @@ const projects = [
     tags: ['Vue 3', 'Tailwind CSS', 'SPA Architecture', 'Micro-animaciones', 'Performance'],
     liveUrl: 'https://wearesamod.com',
     githubUrl: null,
+    privateNote: null,
     status: 'EN PRODUCCIÓN'
   },
   {
@@ -119,8 +125,9 @@ const projects = [
     description: 'Sistema integral para administración de expedientes, flujos de asesoría, documentación y seguimiento de casos para consultoría empresarial.',
     impact: 'Modelado relacional con Django ORM sobre PostgreSQL/SQLite. Seguridad y control de acceso granular RBAC para consultores, administradores y clientes con arquitectura limpia MVC/MVT.',
     tags: ['Python', 'Django ORM', 'PostgreSQL', 'RBAC Security', 'MVC/MVT Architecture'],
-    liveUrl: null,
+    liveUrl: 'https://asesora-moyano.wearesamod.com/',
     githubUrl: null,
+    privateNote: null,
     status: 'EN PRODUCCIÓN'
   },
   {
@@ -137,6 +144,7 @@ const projects = [
     tags: ['WordPress UX/UI', 'Moodle Integration', 'OpenAI Chatbot', 'HTML/CSS/JS', 'EdTech'],
     liveUrl: null,
     githubUrl: null,
+    privateNote: 'Informacion empresarial privada',
     status: 'EVENTO COMPLETADO'
   },
   {
@@ -152,7 +160,8 @@ const projects = [
     impact: 'Desarrollada con Django, Python, JavaScript y CSS para permitir reportes geolocalizados en tiempo real, administración de hogares temporales y gestión de donaciones ciudadanas.',
     tags: ['Django', 'Python 3', 'JavaScript', 'HTML5 & CSS3', 'Social Impact'],
     liveUrl: null,
-    githubUrl: 'https://github.com/j0t4inc0de/j0tainc0de',
+    githubUrl: 'https://github.com/j0t4inc0de/hogardepatas',
+    privateNote: null,
     status: 'REPOSITORIO ABIERTO'
   }
 ]
@@ -219,20 +228,26 @@ const filteredProjects = computed(() => {
           </span>
         </div>
 
-        <!-- Enlaces -->
-        <div class="project-actions" v-if="proj.githubUrl || proj.liveUrl">
+        <!-- Enlaces / Información de Privacidad -->
+        <div class="project-actions" v-if="proj.liveUrl || proj.githubUrl || proj.privateNote">
+          <a v-if="proj.liveUrl" :href="proj.liveUrl" target="_blank" rel="noopener noreferrer" class="action-btn live-btn">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            <span>Sitio web oficial</span>
+          </a>
           <a v-if="proj.githubUrl" :href="proj.githubUrl" target="_blank" rel="noopener noreferrer" class="action-btn github-btn">
             <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/>
             </svg>
             <span>Ver Repositorio GitHub</span>
           </a>
-          <a v-if="proj.liveUrl" :href="proj.liveUrl" target="_blank" rel="noopener noreferrer" class="action-btn live-btn">
+          <div v-if="proj.privateNote" class="action-btn private-badge-btn" title="Información confidencial o bajo acuerdo de privacidad">
             <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
-            <span>Sitio Web Oficial</span>
-          </a>
+            <span>{{ proj.privateNote }}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -443,6 +458,7 @@ const filteredProjects = computed(() => {
 
 .project-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   padding-top: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -480,6 +496,13 @@ const filteredProjects = computed(() => {
 
 .live-btn:hover {
   background: rgba(16, 185, 129, 0.2);
+}
+
+.private-badge-btn {
+  background: rgba(255, 255, 255, 0.02);
+  color: #64748b;
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  cursor: default;
 }
 
 .icon-svg {
