@@ -20,8 +20,8 @@ const projects = [
     period: 'May. 2026 - Actualidad',
     category: 'iot',
     featured: true,
-    description: 'Plataforma web (Dashboard) orientada a la visualización ininterrumpida de datos críticos provenientes de sensores y dispositivos IoT en terreno. Estandariza múltiples fuentes y protocolos en una interfaz única, rápida y personalizable.',
-    impact: 'Resolución de la privacidad y compartimentación de datos industriales mediante una arquitectura granular de control de acceso jerárquico basada en roles (Técnico, Administrador y Trabajador).',
+    description: 'Dashboard IoT orientado al monitoreo ininterrumpido de datos críticos provenientes de sensores en terreno con estandarización de protocolos en tiempo real.',
+    impact: 'Arquitectura de acceso granular por roles (RBAC) garantizando seguridad y compartimentación de datos industriales.',
     tags: ['Vue.js 3', 'IoT Architecture', 'Real-Time Data', 'REST APIs', 'RBAC Security', 'Tailwind CSS'],
     liveUrl: 'https://telemetrics.netzona.cl/login',
     githubUrl: null,
@@ -37,8 +37,8 @@ const projects = [
     period: 'Jul. 2025 - Mar. 2026',
     category: 'iot',
     featured: true,
-    description: 'Diseño, implementación y evolución estratégica de soluciones frontend para la plataforma industrial EFIBOX orientada al monitoreo y control operacional de dispositivos IoT en tiempo real.',
-    impact: 'Optimización en el renderizado de tablas dinámicas con alto volumen de registros, exportación nativa de reportes a PDF/Excel, integración con APIs REST para gestión de alertas tempranas y presentación ejecutiva de KPIs.',
+    description: 'Evolución y diseño de interfaz SPA para el control y supervisión operacional de dispositivos IoT en entornos de alta exigencia industrial.',
+    impact: 'Optimización de tablas con alto volumen de datos, exportación nativa a PDF/Excel y alertas vía REST.',
     tags: ['Vue.js 3', 'Composition API', 'JavaScript ES6+', 'APIs REST', 'Data Visualization', 'Export PDF/Excel'],
     liveUrl: null,
     githubUrl: null,
@@ -54,8 +54,8 @@ const projects = [
     period: 'Abr. 2026 - Actualidad',
     category: 'saas',
     featured: true,
-    description: 'Arquitectura diseñada, desplegada y administrada en servidor propio Ubuntu 24.04 LTS para hospedar bases de datos, microservicios y automatizaciones empresariales operando con alta disponibilidad.',
-    impact: 'Orquestación activa de +24 servicios con Docker Compose (PostgreSQL, SQLite, Redis, n8n, APIs Django/FastAPI y apps Vue). Seguridad Zero-Trust mediante Cloudflare Tunnels (SSL/TLS en el edge) y acceso administrativo SSH exclusivamente vía red Mesh VPN con Tailscale. Ajustes avanzados de kernel (Page Cache en RAM) para maximizar IOPS en unidades SSD.',
+    description: 'Servidor propio Ubuntu 24.04 LTS diseñado para hospedar bases de datos, microservicios y automatizaciones empresariales operando 24/7.',
+    impact: 'Orquestación de +24 servicios con Docker Compose, seguridad Zero-Trust vía Cloudflare Tunnels y red Tailscale VPN.',
     tags: ['DevOps', 'Ubuntu 24.04 LTS', 'Docker Compose', 'Cloudflare Tunnels', 'Tailscale VPN', 'PostgreSQL', 'Redis'],
     liveUrl: null,
     githubUrl: null,
@@ -71,8 +71,8 @@ const projects = [
     period: 'Jun. 2026',
     category: 'saas',
     featured: true,
-    description: 'Plataforma diseñada y construida de principio a fin para depurar y validar listas masivas de correos electrónicos a alta velocidad con pasarela de pagos integrada para transacciones globales.',
-    impact: 'Backend asíncrono de alto rendimiento con Django 5 REST Framework, PostgreSQL y Redis + Gunicorn + Workers, capaz de procesar en paralelo miles de registros sin bloquear la API. Pipeline en 3 capas: Sintaxis RFC 5322, filtrado de +200 dominios desechables y resolución DNS de registros MX. Frontend en Vue.js 3 y Vite con autenticación Passwordless mediante Magic Links.',
+    description: 'Micro-SaaS de alta velocidad para depurar y validar listas masivas de correos electrónicos con pasarela de pagos integrada.',
+    impact: 'Backend asíncrono con Django 5, PostgreSQL y Redis, procesando miles de registros mediante verificación RFC 5322 y resolución DNS MX.',
     tags: ['Vue.js 3', 'Pinia', 'Django 5 REST', 'Redis Workers', 'PostgreSQL', 'Magic Links JWT', 'n8n Webhooks'],
     liveUrl: null,
     githubUrl: 'https://github.com/j0t4inc0de/mailsanitizer',
@@ -88,8 +88,8 @@ const projects = [
     period: 'Ago. 2023 - Jul. 2026',
     category: 'ai',
     featured: true,
-    description: 'Ecosistema Full-Stack impulsado por Inteligencia Artificial para automatizar el préstamo seguro y expedito de equipamiento técnico a alumnos y docentes integrado en un tótem físico táctil.',
-    impact: 'Motor de reconocimiento facial biométrico en Python que identifica personas en milisegundos utilizando embeddings vectoriales (sin almacenar imágenes sensibles para garantizar la privacidad). API con Django REST Framework y frontend reactivo con Vue.js 3 y Pinia mostrando feed de verificación en vivo e inventario de laboratorio.',
+    description: 'Ecosistema impulsado por IA para el préstamo seguro y automatizado de equipamiento técnico en laboratorios mediante un tótem físico táctil.',
+    impact: 'Reconocimiento facial biométrico en milisegundos con Python y embeddings vectoriales sobre frontend reactivo Vue 3 + Pinia preservando privacidad.',
     tags: ['Python IA / Biometría', 'Vue.js 3', 'Pinia', 'Django REST Framework', 'Embeddings', 'Tótem Táctil'],
     liveUrl: null,
     githubUrl: 'https://github.com/j0t4inc0de/smartlend',
@@ -105,8 +105,8 @@ const projects = [
     period: 'Abr. 2026 - Actualidad',
     category: 'saas',
     featured: false,
-    description: 'Desarrollo del frontend principal para la iniciativa enfocada en automatización inteligente, ciberseguridad defensiva y microservicios cloud.',
-    impact: 'Sistema de diseño minimalista, tipografía clara (Inter & Outfit) y micro-animaciones fluidas. SPA de alta velocidad en Vue 3 y TailwindCSS con enrutamiento dinámico y optimización SEO en el cliente.',
+    description: 'Desarrollo del frontend principal para iniciativa enfocada en automatización inteligente, ciberseguridad defensiva y microservicios cloud.',
+    impact: 'SPA de alta velocidad en Vue 3 y Tailwind CSS con micro-animaciones fluidas y optimización SEO.',
     tags: ['Vue 3', 'Tailwind CSS', 'SPA Architecture', 'Micro-animaciones', 'Performance'],
     liveUrl: 'https://wearesamod.com',
     githubUrl: null,
@@ -122,8 +122,8 @@ const projects = [
     period: 'Mar. 2026 - Abr. 2026',
     category: 'saas',
     featured: false,
-    description: 'Sistema integral para administración de expedientes, flujos de asesoría, documentación y seguimiento de casos para consultoría empresarial.',
-    impact: 'Modelado relacional con Django ORM sobre PostgreSQL/SQLite. Seguridad y control de acceso granular RBAC para consultores, administradores y clientes con arquitectura limpia MVC/MVT.',
+    description: 'CRM y plataforma integral para administración de expedientes, flujos de asesoría empresarial, documentación y seguimiento de casos.',
+    impact: 'Modelado relacional con Django ORM sobre PostgreSQL y control de acceso granular en arquitectura limpia MVC/MVT.',
     tags: ['Python', 'Django ORM', 'PostgreSQL', 'RBAC Security', 'MVC/MVT Architecture'],
     liveUrl: 'https://asesora-moyano.wearesamod.com/',
     githubUrl: null,
@@ -139,8 +139,8 @@ const projects = [
     period: 'Mar. 2025 - Jul. 2025',
     category: 'ai',
     featured: false,
-    description: 'Plataforma oficial para evento tecnológico provincial que integró a 15 liceos técnico-profesionales, automatizando inscripciones, rankings y evaluaciones.',
-    impact: 'Sitio institucional en WordPress con alto estándar UX/UI, integración con Moodle para capacitación online y desarrollo de chatbot interactivo con IA vía OpenAI para asistencia técnica instantánea.',
+    description: 'Plataforma web provincial que gestionó y automatizó las olimpiadas tecnológicas de 15 liceos técnico-profesionales.',
+    impact: 'Portal en WordPress integrado con Moodle para capacitación y chatbot de asistencia técnica impulsado por OpenAI.',
     tags: ['WordPress UX/UI', 'Moodle Integration', 'OpenAI Chatbot', 'HTML/CSS/JS', 'EdTech'],
     liveUrl: null,
     githubUrl: null,
@@ -156,8 +156,8 @@ const projects = [
     period: 'Oct. 2023',
     category: 'ai',
     featured: false,
-    description: 'Plataforma web y orientada a dispositivos móviles con el propósito de optimizar el rescate y reporte de animales en situación de calle.',
-    impact: 'Desarrollada con Django, Python, JavaScript y CSS para permitir reportes geolocalizados en tiempo real, administración de hogares temporales y gestión de donaciones ciudadanas.',
+    description: 'Plataforma web y móvil para optimizar el reporte geolocalizado, rescate de animales y coordinación comunitaria.',
+    impact: 'Desarrollo en Django y Python facilitando alertas ciudadanas en tiempo real, control de refugios y gestión de donaciones.',
     tags: ['Django', 'Python 3', 'JavaScript', 'HTML5 & CSS3', 'Social Impact'],
     liveUrl: null,
     githubUrl: 'https://github.com/j0t4inc0de/hogardepatas',
@@ -256,54 +256,54 @@ const filteredProjects = computed(() => {
 
 <style scoped>
 .projects-section {
-  padding: 80px 0;
+  padding: 70px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .section-header-mono {
-  margin-bottom: 48px;
+  margin-bottom: 40px;
   max-width: 780px;
 }
 
 .section-number {
   font-family: monospace;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: #10b981;
   letter-spacing: 0.1em;
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .section-title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   letter-spacing: -0.02em;
 }
 
 .section-subtitle {
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   color: #94a3b8;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .projects-filter {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 44px;
+  gap: 8px;
+  margin-bottom: 36px;
 }
 
 .filter-btn {
-  padding: 8px 18px;
+  padding: 7px 16px;
   background: rgba(255, 255, 255, 0.02);
   color: #64748b;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px;
   font-family: monospace;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -321,28 +321,28 @@ const filteredProjects = computed(() => {
   border-color: #10b981;
 }
 
-/* Projects Grid */
+/* Projects Grid - Compacto & Ejecutivo */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
-  padding: 28px;
+  padding: 22px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.015);
   border: 1px solid rgba(255, 255, 255, 0.07);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   border-color: rgba(16, 185, 129, 0.4);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 16px 32px -12px rgba(0, 0, 0, 0.6);
 }
 
 .card-featured {
@@ -353,8 +353,8 @@ const filteredProjects = computed(() => {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 14px;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .project-meta-left {
@@ -365,7 +365,7 @@ const filteredProjects = computed(() => {
 
 .project-code {
   font-family: monospace;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: #10b981;
   padding: 2px 6px;
@@ -374,7 +374,7 @@ const filteredProjects = computed(() => {
 }
 
 .project-company {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
   color: #e2e8f0;
   text-transform: uppercase;
@@ -383,48 +383,48 @@ const filteredProjects = computed(() => {
 
 .project-status {
   font-family: monospace;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
   color: #64748b;
-  padding: 3px 8px;
+  padding: 2px 6px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 3px;
 }
 
 .project-title {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: #ffffff;
   line-height: 1.35;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .project-role {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #94a3b8;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .project-desc {
-  font-size: 0.93rem;
-  line-height: 1.65;
+  font-size: 0.88rem;
+  line-height: 1.55;
   color: #94a3b8;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .project-impact-box {
   background: rgba(255, 255, 255, 0.02);
   border-left: 2px solid #10b981;
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-radius: 0 4px 4px 0;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .impact-title {
   font-family: monospace;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: #10b981;
   margin-bottom: 4px;
@@ -432,24 +432,24 @@ const filteredProjects = computed(() => {
 }
 
 .impact-text {
-  font-size: 0.86rem;
-  line-height: 1.55;
+  font-size: 0.82rem;
+  line-height: 1.45;
   color: #e2e8f0;
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 24px;
+  gap: 5px;
+  margin-bottom: 16px;
   margin-top: auto;
 }
 
 .tech-tag {
   font-family: monospace;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  padding: 4px 8px;
+  padding: 3px 7px;
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.04);
   color: #94a3b8;
@@ -459,8 +459,8 @@ const filteredProjects = computed(() => {
 .project-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  padding-top: 18px;
+  gap: 10px;
+  padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -468,9 +468,9 @@ const filteredProjects = computed(() => {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  padding: 8px 14px;
+  padding: 7px 12px;
   border-radius: 4px;
   text-decoration: none;
   transition: all 0.25s ease;
@@ -506,8 +506,8 @@ const filteredProjects = computed(() => {
 }
 
 .icon-svg {
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
 }
 
 @media (max-width: 768px) {
