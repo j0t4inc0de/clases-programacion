@@ -305,7 +305,34 @@ const educationList = [
 @media (max-width: 992px) {
   .timeline-container {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .experience-section {
+    padding: 60px 0;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .timeline-card {
+    padding: 18px;
+    border-left-width: 2px;
+  }
+  .item-role {
+    font-size: 1.05rem;
+  }
+  .item-desc {
+    font-size: 0.86rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 }
 </style>

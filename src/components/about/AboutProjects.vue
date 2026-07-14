@@ -13,15 +13,13 @@ const categories = [
 const projects = [
   {
     id: 'telemetrics',
-    code: 'PROJ-01',
+    code: ' 01',
     title: 'Telemetrics — Dashboard IoT en Tiempo Real',
     role: 'Ingeniero de Software Frontend',
     company: 'Soluciones Tecnológicas Netzona Spa',
     period: 'May. 2026 - Actualidad',
     category: 'iot',
-    featured: true,
-    description: 'Dashboard IoT orientado al monitoreo ininterrumpido de datos críticos provenientes de sensores en terreno con estandarización de protocolos en tiempo real.',
-    impact: 'Arquitectura de acceso granular por roles (RBAC) garantizando seguridad y compartimentación de datos industriales.',
+    summary: 'Dashboard IoT para monitoreo en tiempo real de datos críticos de sensores en terreno con seguridad y control de acceso por roles (RBAC).',
     tags: ['Vue.js 3', 'IoT Architecture', 'Real-Time Data', 'REST APIs', 'RBAC Security', 'Tailwind CSS'],
     liveUrl: 'https://telemetrics.netzona.cl/login',
     githubUrl: null,
@@ -30,15 +28,13 @@ const projects = [
   },
   {
     id: 'efibox',
-    code: 'PROJ-02',
+    code: ' 02',
     title: 'EFIBOX Industrial Dashboard',
     role: 'Ingeniero en Informática — Encargado Frontend',
     company: 'Efintel Ltda.',
     period: 'Jul. 2025 - Mar. 2026',
     category: 'iot',
-    featured: true,
-    description: 'Evolución y diseño de interfaz SPA para el control y supervisión operacional de dispositivos IoT en entornos de alta exigencia industrial.',
-    impact: 'Optimización de tablas con alto volumen de datos, exportación nativa a PDF/Excel y alertas vía REST.',
+    summary: 'SPA industrial para control y supervisión operacional de dispositivos IoT, con optimización de tablas masivas y exportación nativa a PDF/Excel.',
     tags: ['Vue.js 3', 'Composition API', 'JavaScript ES6+', 'APIs REST', 'Data Visualization', 'Export PDF/Excel'],
     liveUrl: null,
     githubUrl: null,
@@ -47,15 +43,13 @@ const projects = [
   },
   {
     id: 'linux-cloud',
-    code: 'PROJ-03',
+    code: ' 03',
     title: 'Cloud Privada & Microservicios (Linux Server Zero-Trust)',
     role: 'DevOps & Arquitecto de Infraestructura',
     company: 'Infraestructura Propia 24/7',
     period: 'Abr. 2026 - Actualidad',
     category: 'saas',
-    featured: true,
-    description: 'Servidor propio Ubuntu 24.04 LTS diseñado para hospedar bases de datos, microservicios y automatizaciones empresariales operando 24/7.',
-    impact: 'Orquestación de +24 servicios con Docker Compose, seguridad Zero-Trust vía Cloudflare Tunnels y red Tailscale VPN.',
+    summary: 'Servidor Ubuntu 24.04 LTS con orquestación de +24 servicios en Docker Compose, seguridad Zero-Trust (Cloudflare Tunnels) y red Tailscale VPN.',
     tags: ['DevOps', 'Ubuntu 24.04 LTS', 'Docker Compose', 'Cloudflare Tunnels', 'Tailscale VPN', 'PostgreSQL', 'Redis'],
     liveUrl: null,
     githubUrl: null,
@@ -64,15 +58,13 @@ const projects = [
   },
   {
     id: 'cleanmail',
-    code: 'PROJ-04',
+    code: ' 04',
     title: 'CleanMail — Micro-SaaS de Verificación Masiva de Emails',
     role: 'Full-Stack Engineer & SecOps',
     company: 'SaaS Propio con Pasarela de Pagos',
     period: 'Jun. 2026',
     category: 'saas',
-    featured: true,
-    description: 'Micro-SaaS de alta velocidad para depurar y validar listas masivas de correos electrónicos con pasarela de pagos integrada.',
-    impact: 'Backend asíncrono con Django 5, PostgreSQL y Redis, procesando miles de registros mediante verificación RFC 5322 y resolución DNS MX.',
+    summary: 'Micro-SaaS de alta velocidad con Django 5, PostgreSQL y workers asíncronos en Redis para validar listas masivas de emails (RFC 5322/DNS MX).',
     tags: ['Vue.js 3', 'Pinia', 'Django 5 REST', 'Redis Workers', 'PostgreSQL', 'Magic Links JWT', 'n8n Webhooks'],
     liveUrl: null,
     githubUrl: 'https://github.com/j0t4inc0de/mailsanitizer',
@@ -81,15 +73,13 @@ const projects = [
   },
   {
     id: 'smartlend',
-    code: 'PROJ-05',
+    code: ' 05',
     title: 'SmartLend — Tótem con Biometría Facial e IA (INACAP)',
     role: 'Desarrollador Full-Stack & AI Integration',
     company: 'INACAP Sede Los Ángeles',
     period: 'Ago. 2023 - Jul. 2026',
     category: 'ai',
-    featured: true,
-    description: 'Ecosistema impulsado por IA para el préstamo seguro y automatizado de equipamiento técnico en laboratorios mediante un tótem físico táctil.',
-    impact: 'Reconocimiento facial biométrico en milisegundos con Python y embeddings vectoriales sobre frontend reactivo Vue 3 + Pinia preservando privacidad.',
+    summary: 'Tótem de laboratorio con reconocimiento facial biométrico en milisegundos mediante Python y embeddings vectoriales sobre frontend reactivo Vue 3 + Pinia.',
     tags: ['Python IA / Biometría', 'Vue.js 3', 'Pinia', 'Django REST Framework', 'Embeddings', 'Tótem Táctil'],
     liveUrl: null,
     githubUrl: 'https://github.com/j0t4inc0de/smartlend',
@@ -98,15 +88,13 @@ const projects = [
   },
   {
     id: 'wearesamod',
-    code: 'PROJ-06',
+    code: ' 06',
     title: 'We Are Samod — Plataforma Cloud & SaaS Ecosystem',
     role: 'Lead Frontend Developer',
     company: 'We Are Samod',
     period: 'Abr. 2026 - Actualidad',
     category: 'saas',
-    featured: false,
-    description: 'Desarrollo del frontend principal para iniciativa enfocada en automatización inteligente, ciberseguridad defensiva y microservicios cloud.',
-    impact: 'SPA de alta velocidad en Vue 3 y Tailwind CSS con micro-animaciones fluidas y optimización SEO.',
+    summary: 'Desarrollo de frontend SPA de alta velocidad en Vue 3 y Tailwind CSS para automatización inteligente y ciberseguridad cloud.',
     tags: ['Vue 3', 'Tailwind CSS', 'SPA Architecture', 'Micro-animaciones', 'Performance'],
     liveUrl: 'https://wearesamod.com',
     githubUrl: null,
@@ -115,15 +103,13 @@ const projects = [
   },
   {
     id: 'asesorats',
-    code: 'PROJ-07',
+    code: ' 07',
     title: 'Asesora TS — CRM & Sistema de Gestión Empresarial',
     role: 'Python/Django Backend & Full-Stack Developer',
     company: 'Asesora TS',
     period: 'Mar. 2026 - Abr. 2026',
     category: 'saas',
-    featured: false,
-    description: 'CRM y plataforma integral para administración de expedientes, flujos de asesoría empresarial, documentación y seguimiento de casos.',
-    impact: 'Modelado relacional con Django ORM sobre PostgreSQL y control de acceso granular en arquitectura limpia MVC/MVT.',
+    summary: 'CRM para gestión de expedientes empresariales con modelado relacional sobre Django ORM y control de acceso granular bajo arquitectura MVC/MVT.',
     tags: ['Python', 'Django ORM', 'PostgreSQL', 'RBAC Security', 'MVC/MVT Architecture'],
     liveUrl: 'https://asesora-moyano.wearesamod.com/',
     githubUrl: null,
@@ -132,15 +118,13 @@ const projects = [
   },
   {
     id: 'desafiatp',
-    code: 'PROJ-08',
+    code: ' 08',
     title: 'Olimpiadas Tecnológicas DesafíaT-TP 2025',
     role: 'Desarrollador Web & Coordinador Técnico-Educativo',
     company: 'Liceo Bicentenario Tecnológico El Huertón',
     period: 'Mar. 2025 - Jul. 2025',
     category: 'ai',
-    featured: false,
-    description: 'Plataforma web provincial que gestionó y automatizó las olimpiadas tecnológicas de 15 liceos técnico-profesionales.',
-    impact: 'Portal en WordPress integrado con Moodle para capacitación y chatbot de asistencia técnica impulsado por OpenAI.',
+    summary: 'Plataforma provincial de olimpiadas tecnológicas (15 liceos) integrada con Moodle y chatbot de asistencia técnica en vivo vía OpenAI.',
     tags: ['WordPress UX/UI', 'Moodle Integration', 'OpenAI Chatbot', 'HTML/CSS/JS', 'EdTech'],
     liveUrl: null,
     githubUrl: null,
@@ -149,15 +133,13 @@ const projects = [
   },
   {
     id: 'hogar4patas',
-    code: 'PROJ-09',
+    code: ' 09',
     title: 'Hogar de 4 Patas — Plataforma de Rescate Animal',
     role: 'Full-Stack Developer',
     company: 'Asociado con INACAP',
     period: 'Oct. 2023',
     category: 'ai',
-    featured: false,
-    description: 'Plataforma web y móvil para optimizar el reporte geolocalizado, rescate de animales y coordinación comunitaria.',
-    impact: 'Desarrollo en Django y Python facilitando alertas ciudadanas en tiempo real, control de refugios y gestión de donaciones.',
+    summary: 'Plataforma web y móvil en Django y Python con alertas geolocalizadas en tiempo real para el rescate y gestión ciudadana de animales.',
     tags: ['Django', 'Python 3', 'JavaScript', 'HTML5 & CSS3', 'Social Impact'],
     liveUrl: null,
     githubUrl: 'https://github.com/j0t4inc0de/hogardepatas',
@@ -178,7 +160,7 @@ const filteredProjects = computed(() => {
       <span class="section-number">03 / CASE STUDIES</span>
       <h3 class="section-title">PROYECTOS DE ALTO IMPACTO</h3>
       <p class="section-subtitle">
-        Análisis técnico de plataformas en producción: desde visualización IoT de misión crítica hasta microservicios asíncronos y servidores Linux orquestados.
+        Análisis técnico de plataformas en producción: soluciones concisas enfocadas en arquitectura, rendimiento e ingeniería escalable.
       </p>
     </div>
 
@@ -195,13 +177,12 @@ const filteredProjects = computed(() => {
       </button>
     </div>
 
-    <!-- Grid de Proyectos -->
+    <!-- Grid de Proyectos 100% Uniforme -->
     <div class="projects-grid">
       <div
         v-for="proj in filteredProjects"
         :key="proj.id"
         class="project-card"
-        :class="{ 'card-featured': proj.featured }"
       >
         <div class="project-top">
           <div class="project-meta-left">
@@ -214,12 +195,7 @@ const filteredProjects = computed(() => {
         <h4 class="project-title">{{ proj.title }}</h4>
         <div class="project-role">{{ proj.role }} &middot; {{ proj.period }}</div>
 
-        <p class="project-desc">{{ proj.description }}</p>
-        
-        <div class="project-impact-box">
-          <div class="impact-title">ARQUITECTURA & SOLUCIÓN:</div>
-          <p class="impact-text">{{ proj.impact }}</p>
-        </div>
+        <p class="project-summary">{{ proj.summary }}</p>
 
         <!-- Tags -->
         <div class="project-tags">
@@ -261,8 +237,8 @@ const filteredProjects = computed(() => {
 }
 
 .section-header-mono {
-  margin-bottom: 40px;
-  max-width: 780px;
+  margin-bottom: 36px;
+  max-width: 760px;
 }
 
 .section-number {
@@ -293,7 +269,7 @@ const filteredProjects = computed(() => {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
 }
 
 .filter-btn {
@@ -321,17 +297,17 @@ const filteredProjects = computed(() => {
   border-color: #10b981;
 }
 
-/* Projects Grid - Compacto & Ejecutivo */
+/* Projects Grid - 100% Uniforme & Súper Compacto */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
-  padding: 22px;
+  padding: 24px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.015);
   border: 1px solid rgba(255, 255, 255, 0.07);
@@ -343,10 +319,6 @@ const filteredProjects = computed(() => {
   transform: translateY(-3px);
   border-color: rgba(16, 185, 129, 0.4);
   box-shadow: 0 16px 32px -12px rgba(0, 0, 0, 0.6);
-}
-
-.card-featured {
-  border-top: 2px solid #10b981;
 }
 
 .project-top {
@@ -393,7 +365,7 @@ const filteredProjects = computed(() => {
 }
 
 .project-title {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   font-weight: 800;
   color: #ffffff;
   line-height: 1.35;
@@ -404,44 +376,21 @@ const filteredProjects = computed(() => {
   font-size: 0.8rem;
   color: #94a3b8;
   font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.project-desc {
-  font-size: 0.88rem;
-  line-height: 1.55;
-  color: #94a3b8;
-  margin-bottom: 12px;
-}
-
-.project-impact-box {
-  background: rgba(255, 255, 255, 0.02);
-  border-left: 2px solid #10b981;
-  padding: 10px 14px;
-  border-radius: 0 4px 4px 0;
   margin-bottom: 14px;
 }
 
-.impact-title {
-  font-family: monospace;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: #10b981;
-  margin-bottom: 4px;
-  letter-spacing: 0.04em;
-}
-
-.impact-text {
-  font-size: 0.82rem;
-  line-height: 1.45;
-  color: #e2e8f0;
+.project-summary {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 18px;
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  margin-bottom: 16px;
+  gap: 6px;
+  margin-bottom: 18px;
   margin-top: auto;
 }
 
@@ -449,7 +398,7 @@ const filteredProjects = computed(() => {
   font-family: monospace;
   font-size: 0.72rem;
   font-weight: 600;
-  padding: 3px 7px;
+  padding: 3px 8px;
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.04);
   color: #94a3b8;
@@ -513,6 +462,45 @@ const filteredProjects = computed(() => {
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-section {
+    padding: 55px 0;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .projects-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .filter-btn {
+    flex: 1 1 calc(50% - 6px);
+    text-align: center;
+    padding: 9px 8px;
+    font-size: 0.72rem;
+  }
+  .project-card {
+    padding: 18px;
+  }
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .action-btn {
+    justify-content: center;
+    width: 100%;
+    padding: 11px 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .filter-btn {
+    flex: 1 1 100%;
   }
 }
 </style>

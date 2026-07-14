@@ -5,51 +5,51 @@ const activeCategory = ref('backend')
 
 const skillCategories = [
   { id: 'all', name: 'TODAS LAS COMPETENCIAS' },
-  { id: 'frontend', name: 'FRONTEND & UI/UX' },
   { id: 'backend', name: 'BACKEND & PYTHON' },
+  { id: 'frontend', name: 'FRONTEND & UI/UX' },
   { id: 'devops', name: 'DEVOPS & LINUX SECOPS' },
   { id: 'db', name: 'BASES DE DATOS' },
 ]
 
-const skills = [
-  // Frontend
-  { name: 'Vue.js 3 (Composition API)', category: 'frontend', level: 'Especialista', code: 'VUE-01', featured: true },
-  { name: 'Pinia State Management', category: 'frontend', level: 'Avanzado', code: 'VUE-02', featured: true },
-  { name: 'Tailwind CSS / Glassmorphism', category: 'frontend', level: 'Avanzado', code: 'CSS-01', featured: true },
-  { name: 'JavaScript ES6+', category: 'frontend', level: 'Avanzado', code: 'JS-01', featured: false },
-  { name: 'Vite & Build Tooling', category: 'frontend', level: 'Avanzado', code: 'BLD-01', featured: false },
-  { name: 'HTML5 & Vanilla CSS3 Architecture', category: 'frontend', level: 'Avanzado', code: 'WEB-01', featured: false },
-  { name: 'Dashboards IoT & Real-Time UI', category: 'frontend', level: 'Especialista', code: 'IOT-UI', featured: true },
-  
-  // Backend & IA
-  { name: 'Python 3', category: 'backend', level: 'Avanzado', code: 'PY-01', featured: true },
-  { name: 'Django & Django REST Framework', category: 'backend', level: 'Avanzado', code: 'DJ-01', featured: true },
-  { name: 'FastAPI & Microservices Architecture', category: 'backend', level: 'Intermedio', code: 'FST-01', featured: false },
-  { name: 'Biometría & Embeddings Facial IA', category: 'backend', level: 'Intermedio', code: 'AI-01', featured: true },
-  { name: 'n8n Automation & Webhook Pipelines', category: 'backend', level: 'Avanzado', code: 'N8N-01', featured: false },
-  { name: 'Integración APIs REST & WebSockets', category: 'backend', level: 'Avanzado', code: 'API-01', featured: false },
+const skillsList = [
+  // BACKEND & PYTHON
+  { name: 'Python 3', category: 'backend', level: 'Especialista', code: 'PY-01' },
+  { name: 'Django & Django REST Framework', category: 'backend', level: 'Avanzado', code: 'DJ-01' },
+  { name: 'FastAPI & Microservices Architecture', category: 'backend', level: 'Intermedio', code: 'FST-01' },
+  { name: 'Biometría & Embeddings Facial IA', category: 'backend', level: 'Intermedio', code: 'AI-01' },
+  { name: 'n8n Automation & Webhooks Engine', category: 'backend', level: 'Avanzado', code: 'N8N-01' },
+  { name: 'Integración APIs REST & WebSockets', category: 'backend', level: 'Avanzado', code: 'API-01' },
 
-  // DevOps & Linux SecOps
-  { name: 'Linux Server (Ubuntu 24.04 LTS)', category: 'devops', level: 'Avanzado', code: 'LNX-01', featured: true },
-  { name: 'Docker & Docker Compose (+24 microservicios)', category: 'devops', level: 'Avanzado', code: 'DCK-01', featured: true },
-  { name: 'Cloudflare Tunnels (Zero-Trust SSL/TLS)', category: 'devops', level: 'Avanzado', code: 'CF-01', featured: true },
-  { name: 'Tailscale Mesh VPN Architecture', category: 'devops', level: 'Avanzado', code: 'TS-01', featured: false },
-  { name: 'Git & GitHub Version Control', category: 'devops', level: 'Avanzado', code: 'GIT-01', featured: false },
+  // FRONTEND & UI/UX
+  { name: 'Vue.js 3 (Composition API / Setup)', category: 'frontend', level: 'Especialista', code: 'VUE-01' },
+  { name: 'Pinia State Management', category: 'frontend', level: 'Avanzado', code: 'PIN-01' },
+  { name: 'Tailwind CSS / Glassmorphism Architecture', category: 'frontend', level: 'Avanzado', code: 'CSS-01' },
+  { name: 'JavaScript ES6+ / Asynchronous JS', category: 'frontend', level: 'Avanzado', code: 'JS-01' },
+  { name: 'Vite Tooling & Performance Optimization', category: 'frontend', level: 'Avanzado', code: 'BLD-01' },
+  { name: 'Dashboards IoT & UI en Tiempo Real', category: 'frontend', level: 'Especialista', code: 'IOT-01' },
+  { name: 'HTML5 & Vanilla CSS3 Architecture', category: 'frontend', level: 'Avanzado', code: 'WEB-01' },
 
-  // DB
-  { name: 'PostgreSQL Relational DB', category: 'db', level: 'Avanzado', code: 'PG-01', featured: true },
-  { name: 'Redis (Caching & Asynchronous Workers)', category: 'db', level: 'Intermedio', code: 'RDS-01', featured: true },
-  { name: 'SQLite & Query Optimization', category: 'db', level: 'Avanzado', code: 'SQL-01', featured: false },
-  { name: 'Modelado Relational & ORM', category: 'db', level: 'Avanzado', code: 'ORM-01', featured: false }
+  // DEVOPS & INFRAESTRUCTURA
+  { name: 'Linux Server (Ubuntu 24.04 LTS Administration)', category: 'devops', level: 'Avanzado', code: 'LNX-01' },
+  { name: 'Docker & Docker Compose (+24 microservicios)', category: 'devops', level: 'Avanzado', code: 'DCK-01' },
+  { name: 'Cloudflare Tunnels (Zero-Trust SSL/TLS Protection)', category: 'devops', level: 'Avanzado', code: 'CF-01' },
+  { name: 'Tailscale Mesh VPN Architecture', category: 'devops', level: 'Avanzado', code: 'TS-01' },
+  { name: 'Git & GitHub Version Control Architecture', category: 'devops', level: 'Avanzado', code: 'GIT-01' },
+
+  // BASES DE DATOS
+  { name: 'PostgreSQL Relational DB', category: 'db', level: 'Avanzado', code: 'PG-01' },
+  { name: 'Redis (Caching & Async Workers)', category: 'db', level: 'Intermedio', code: 'RDS-01' },
+  { name: 'SQLite & Query Optimization', category: 'db', level: 'Avanzado', code: 'SQL-01' },
+  { name: 'Modelado Relacional & ORM', category: 'db', level: 'Avanzado', code: 'ORM-01' },
 ]
 
 const filteredSkills = computed(() => {
-  if (activeCategory.value === 'all') return skills
-  return skills.filter(s => s.category === activeCategory.value)
+  if (activeCategory.value === 'all') return skillsList
+  return skillsList.filter(s => s.category === activeCategory.value)
 })
 
-const filterSkills = (categoryId) => {
-  activeCategory.value = categoryId
+const filterSkills = (catId) => {
+  activeCategory.value = catId
 }
 </script>
 
@@ -76,13 +76,12 @@ const filterSkills = (categoryId) => {
       </button>
     </div>
 
-    <!-- Grid de Habilidades -->
+    <!-- Grid de Habilidades Uniforme -->
     <div class="skills-grid">
       <div
         v-for="skill in filteredSkills"
         :key="skill.name"
         class="skill-card"
-        :class="{ featured: skill.featured }"
       >
         <div class="skill-code">{{ skill.code }}</div>
         <div class="skill-info">
@@ -189,10 +188,6 @@ const filterSkills = (categoryId) => {
   background: rgba(16, 185, 129, 0.03);
 }
 
-.skill-card.featured {
-  border-left: 3px solid #10b981;
-}
-
 .skill-code {
   font-family: monospace;
   font-size: 0.75rem;
@@ -270,9 +265,97 @@ const filterSkills = (categoryId) => {
   background: #64748b;
 }
 
+/* Responsive & Mobile-First ultra limpio para móvil */
 @media (max-width: 640px) {
+  .skills-section {
+    padding: 55px 0;
+  }
+  .section-title {
+    font-size: 1.65rem;
+  }
+  .skills-filter {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    scrollbar-width: none;
+  }
+  .skills-filter::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 8px 14px;
+    font-size: 0.72rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+  }
+  .filter-btn.active {
+    background: #10b981;
+    color: #080a0f;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+  }
+
+  /* Ocultamos código de skill y barra de carga en móvil para máxima limpieza */
+  .skill-code,
+  .skill-bar {
+    display: none !important;
+  }
+
   .skills-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .skill-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    gap: 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .skill-info {
+    width: 100%;
+  }
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 8px;
+  }
+  .skill-name {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #f8fafc;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    line-height: 1.3;
+  }
+  .skill-badge {
+    font-size: 0.66rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .skill-card {
+    padding: 12px 14px;
+    gap: 8px;
+  }
+  .skill-name {
+    font-size: 0.82rem;
   }
 }
 </style>

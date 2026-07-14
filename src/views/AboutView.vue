@@ -130,7 +130,23 @@ defineProps({
 
 @media (max-width: 640px) {
   .tech-portfolio-container {
-    padding: 0 20px;
+    padding: 0 16px;
+  }
+  .tech-footer {
+    padding: 36px 18px;
+  }
+  .footer-brand {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  .footer-note {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .tech-portfolio-container {
+    padding: 0 14px;
   }
 }
 </style>

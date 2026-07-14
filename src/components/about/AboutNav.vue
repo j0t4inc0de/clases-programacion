@@ -344,15 +344,16 @@ onUnmounted(() => {
 
 @media (max-width: 1080px) {
   .nav-menu {
-    gap: 20px;
+    gap: 16px;
   }
   .nav-brand {
-    padding-right: 20px;
+    padding-right: 14px;
   }
 }
 
 @media (max-width: 960px) {
-  .nav-menu {
+  /* En móvil/tablet, ocultamos los enlaces 01 a 04 pero dejamos visible y accesible el botón 05. CONTACTO y su popup flotante */
+  .nav-menu > a:not(.contact-glow-btn) {
     display: none;
   }
   .brand-tag {
@@ -362,10 +363,30 @@ onUnmounted(() => {
 
 @media (max-width: 640px) {
   .nav-container {
-    padding: 0 18px;
+    padding: 0 16px;
   }
   .brand-title {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
+  }
+  .contact-glow-btn {
+    padding: 6px 12px !important;
+    font-size: 0.78rem;
+  }
+  /* Ajustamos el popup en móvil para evitar desbordamiento horizontal */
+  .contact-navbar-popup {
+    right: -6px;
+    width: calc(100vw - 32px);
+    max-width: 310px;
+    padding: 14px;
+  }
+  .popup-arrow {
+    right: 32px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-title {
+    font-size: 0.76rem;
   }
 }
 </style>

@@ -351,15 +351,51 @@ const recruiterWhatsappLink = computed(() => {
 }
 
 @media (max-width: 640px) {
-  .hero-title {
-    font-size: 2.4rem;
+  .hero-section {
+    padding: 105px 0 60px;
   }
-  .tech-metrics-panel {
-    grid-template-columns: 1fr;
+  .meta-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .hero-title {
+    font-size: 2.15rem;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .role-statement {
+    font-size: 0.98rem;
+    margin-bottom: 22px;
+  }
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 34px;
   }
   .cta-actions {
     flex-direction: column;
     align-items: stretch;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  .btn-primary-tech,
+  .btn-secondary-tech,
+  .btn-outline-tech {
+    justify-content: center;
+    width: 100%;
+    padding: 13px 20px;
+  }
+  .tech-metrics-panel {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 18px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 1.85rem;
   }
 }
 </style>

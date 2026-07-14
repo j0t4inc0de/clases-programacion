@@ -257,11 +257,21 @@ const recruiterWhatsappLink = computed(() => {
 }
 
 @media (max-width: 640px) {
+  .recruiter-cta-section {
+    padding: 60px 0;
+  }
   .cta-box {
-    padding: 36px 20px;
+    padding: 28px 18px;
   }
   .cta-main-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+  .contact-card {
+    padding: 22px 18px;
+  }
+  .btn-cta-whatsapp, .btn-cta-email {
+    padding: 13px 18px;
+    font-size: 0.86rem;
   }
 }
 </style>
