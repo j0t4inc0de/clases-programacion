@@ -1,6 +1,9 @@
 <script setup>
 import { ref, computed } from 'vue'
+import { useRoute } from 'vue-router'
 import Header from './components/Header.vue'
+
+const route = useRoute()
 
 // ==========================================
 // CONFIGURACIÓN CENTRALIZADA DE JUAN ERICES
@@ -27,7 +30,7 @@ const whatsappLink = computed(() => {
 </script>
 
 <template>
-  <Header :whatsapp-link="whatsappLink" />
+  <Header v-if="route.path !== '/about' && route.name !== 'about'" :whatsapp-link="whatsappLink" />
   
   <main>
     <router-view 
