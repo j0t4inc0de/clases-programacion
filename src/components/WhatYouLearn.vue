@@ -18,14 +18,14 @@ const topics = ref([
     icon: 'python'
   },
   {
-    title: 'Variables, condicionales y ciclos',
-    desc: 'Aprende a estructurar decisiones (si/entonces) y repeticiones (ciclos para/mientras) en tus algoritmos.',
-    icon: 'branch'
+    title: 'Bases de datos relacionales',
+    desc: 'Diseña y consulta tablas estructuradas con SQL. Domina el modelado de datos, claves primarias, foráneas y consultas complejas.',
+    icon: 'sql'
   },
   {
-    title: 'Funciones',
-    desc: 'Divide y vencerás. Aprende a modularizar tu código para crear programas limpios, reutilizables y profesionales.',
-    icon: 'function'
+    title: 'Bases de datos no relacionales',
+    desc: 'Aprende sobre flexibilidad y escalabilidad con NoSQL (MongoDB, clave-valor). Estructura documentos JSON y maneja grandes volúmenes de datos.',
+    icon: 'nosql'
   },
   {
     title: 'Preparación para pruebas',
@@ -64,21 +64,20 @@ const topics = ref([
               <line x1="12" y1="19" x2="20" y2="19"></line>
             </svg>
             
-            <svg v-else-if="topic.icon === 'python'" class="topic-icon python-colored" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M11.93 2.01c-2.45.02-4.71.69-5.91 1.83C4.38 5.43 4.54 7.29 4.54 8.78h4.54c1.23 0 2.22.99 2.22 2.22v4.54c0 1.23-.99 2.22-2.22 2.22H3.72c-.89 0-1.78-.11-2.45-.67-.78-.67-.93-1.63-.93-2.61V8.78c0-2.46.68-4.72 1.82-5.91C3.81 1.15 6.07.49 8.52.49h3.41c1.37 0 2.45.1 3.41.67.68.45.98 1.15.98 1.83v2.01h-4.38c-.78 0-1.42.64-1.42 1.42v1.41h4.38V4.54c0-.98-.16-1.93-.93-2.6-1.12-1.01-3.21-1.92-5.93-1.93zM5.96 5.86a.91.91 0 1 1 0 1.82.91.91 0 0 1 0-1.82zm8.56 16.13c2.45-.02 4.71-.69 5.91-1.83 1.64-1.59 1.48-3.45 1.48-4.94h-4.54c-1.23 0-2.22-.99-2.22-2.22v-4.54c0-1.23.99-2.22 2.22-2.22h5.36c.89 0 1.78.11 2.45.67.78.67.93 1.63.93 2.61v5.7c0 2.46-.68 4.72-1.82 5.91-1.65 1.72-3.91 2.38-6.36 2.38h-3.41c-1.37 0-2.45-.1-3.41-.67-.68-.45-.98-1.15-.98-1.83v-2.01h4.38c.78 0 1.42-.64 1.42-1.42v-1.41h-4.38v3.29c0 .98.16 1.93.93 2.6 1.12 1.01 3.21 1.92 5.93 1.93zm5.97-3.26a.91.91 0 1 1 0-1.82.91.91 0 0 1 0 1.82z"/>
+            <img v-else-if="topic.icon === 'python'" src="/python_logo_icon.webp" alt="Python Logo" class="topic-icon python-webp-icon" />
+            
+            <svg v-else-if="topic.icon === 'sql'" class="topic-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
             </svg>
             
-            <svg v-else-if="topic.icon === 'branch'" class="topic-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="6" y1="3" x2="6" y2="15"></line>
-              <circle cx="18" cy="6" r="3"></circle>
-              <circle cx="6" cy="18" r="3"></circle>
-              <path d="M18 9a9 9 0 0 1-9 9"></path>
-            </svg>
-            
-            <svg v-else-if="topic.icon === 'function'" class="topic-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-              <text x="9" y="13" font-family="monospace" font-weight="bold" font-size="8" fill="currentColor">f(x)</text>
+            <svg v-else-if="topic.icon === 'nosql'" class="topic-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              <path d="M7 16l-2 2 2 2"></path>
+              <path d="M17 16l2 2-2 2"></path>
             </svg>
             
             <svg v-else-if="topic.icon === 'academic'" class="topic-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -155,12 +154,13 @@ const topics = ref([
   height: 26px;
 }
 
-.python-colored {
-  transition: fill 0.3s ease;
+.python-webp-icon {
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-.topic-card:hover .python-colored {
-  fill: #ffffff;
+.topic-card:hover .python-webp-icon {
+  transform: scale(1.1);
 }
 
 .topic-card-title {

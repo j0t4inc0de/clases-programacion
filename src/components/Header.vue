@@ -23,17 +23,18 @@ const closeMobileMenu = () => {
 <template>
   <header class="main-header glass-panel">
     <div class="container header-container">
-      <a href="#" class="logo">
+      <router-link to="/" class="logo">
         <span class="logo-code">&lt;</span>
         <span class="logo-name">Juan Erices</span>
         <span class="logo-code">/&gt;</span>
-      </a>
+      </router-link>
 
       <!-- Desktop Nav -->
       <nav class="desktop-nav">
-        <a href="#aprender">¿Qué aprenderás?</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#planes">Planes</a>
+        <router-link to="/#aprender">¿Qué aprenderás?</router-link>
+        <router-link to="/#sobre-mi">Sobre mí</router-link>
+        <router-link to="/#planes">Planes</router-link>
+        <router-link to="/about">Acerca de</router-link>
         <a :href="whatsappLink" target="_blank" rel="noopener noreferrer" class="btn-accent-anim nav-agendar-btn">
           <div class="circle c-1"></div>
           <div class="circle c-2"></div>
@@ -65,9 +66,10 @@ const closeMobileMenu = () => {
     <!-- Mobile Drawer Menu -->
     <div class="mobile-nav" :class="{ 'is-open': isMobileMenuOpen }">
       <nav class="mobile-nav-links">
-        <a href="#aprender" @click="closeMobileMenu">¿Qué aprenderás?</a>
-        <a href="#sobre-mi" @click="closeMobileMenu">Sobre mí</a>
-        <a href="#planes" @click="closeMobileMenu">Planes</a>
+        <router-link to="/#aprender" @click="closeMobileMenu">¿Qué aprenderás?</router-link>
+        <router-link to="/#sobre-mi" @click="closeMobileMenu">Sobre mí</router-link>
+        <router-link to="/#planes" @click="closeMobileMenu">Planes</router-link>
+        <router-link to="/about" @click="closeMobileMenu">Acerca de</router-link>
         <a 
           :href="whatsappLink" 
           target="_blank" 

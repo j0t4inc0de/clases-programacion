@@ -1,13 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
 import Header from './components/Header.vue'
-import HeroSection from './components/HeroSection.vue'
-import WhatYouLearn from './components/WhatYouLearn.vue'
-import ForWhoSection from './components/ForWhoSection.vue'
-import PlansSection from './components/PlansSection.vue'
-import TrustSection from './components/TrustSection.vue'
-import AboutSection from './components/AboutSection.vue'
-import ContactSection from './components/ContactSection.vue'
 
 // ==========================================
 // CONFIGURACIÓN CENTRALIZADA DE JUAN ERICES
@@ -37,22 +30,11 @@ const whatsappLink = computed(() => {
   <Header :whatsapp-link="whatsappLink" />
   
   <main>
-    <HeroSection :whatsapp-link="whatsappLink" />
-    
-    <WhatYouLearn />
-    
-    <ForWhoSection />
-    
-    <AboutSection />
-    
-    <PlansSection :phone-number="phoneNumber" />
-    
-    <TrustSection />
-    
-    <ContactSection 
+    <router-view 
       :whatsapp-link="whatsappLink"
-      :email="contactEmail"
-      :availability="currentAvailability"
+      :phone-number="phoneNumber"
+      :contact-email="contactEmail"
+      :current-availability="currentAvailability"
     />
   </main>
 </template>
